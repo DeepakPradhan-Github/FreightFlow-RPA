@@ -28,7 +28,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 80%;
             margin: 0;
         }
 
@@ -38,8 +38,10 @@
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             max-width: 600px;
-            width: 100%;
+            width: 25%;
+            height: 50%;
             position: relative;
+            margin: 1%;
         }
 
         h1 {
@@ -50,7 +52,7 @@
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 1%;
             position: relative;
         }
 
@@ -62,15 +64,28 @@
         }
 
         input[type="text"],
-        input[type="date"],
+        
         input[type="number"] {
             width: calc(100% - 20px);
             padding: 12px;
             border: 1px solid #ccc;
             border-radius: 5px;
             display: block;
-            font-size: 16px;
+            font-size: 80%;
             box-sizing: border-box;
+            height:47%;
+        }
+
+    
+        input[type="date"] {
+            width: calc(100% - 10px);
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: block;
+            font-size: 80%;
+            box-sizing: border-box;
+            height:47%;
         }
 
         .suggestions {
@@ -81,25 +96,25 @@
 
         button {
             width: 100%;
-            padding: 15px;
+            padding: 3%;
             background-color: #007bff;
             border: none;
             border-radius: 5px;
             color: #fff;
-            font-size: 18px;
+            font-size: 93%;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
 
         #button1 {
-            width: 80%;
-            height: 80%;
-            padding: 15px;
+            width: 70%;
+            height: 60%;
+            padding: 10px;
             background-color: #007bff;
             border: none;
             border-radius: 5px;
             color: #fff;
-            font-size: 18px;
+            font-size: 93%;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
@@ -254,7 +269,7 @@
 
     <div class="container">
         <div id="form-container">
-            <h1>Port Form</h1>
+            <h1 style="margin-top:-6%">Port Form</h1>
             <form onsubmit="return validateMyPort()" method="POST" action="data3.php">
                 <div class="pform">
                     <div class="pform2">
