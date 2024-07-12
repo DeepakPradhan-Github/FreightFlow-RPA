@@ -91,6 +91,19 @@
             transition: background-color 0.3s ease;
         }
 
+        #button1 {
+            width: 80%;
+            height: 80%;
+            padding: 15px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
         button:hover {
             background-color: #0056b3;
         }
@@ -340,7 +353,7 @@
                         <td><?php echo $row["destination"]; ?></td>
                         <td><?php echo $row["container"]; ?></td>
                         <td><?php echo $row["commodity"]; ?></td>
-                        <td><button onclick='viewDetails( <?php echo $row["job_id"] ?> )'>View Details</button></td>
+                        <td><button id="button1" onclick='viewDetails( <?php echo $row["job_id"] ?> )'>View Details</button></td>
                     </tr>
                 <?php } ?>
 
