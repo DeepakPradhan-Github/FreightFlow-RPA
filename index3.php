@@ -19,12 +19,14 @@
             height: 100vh;
             margin: 0; */
             
+            
         }
 
         .container {
 
             
-            background-image: url("image/shipimage2.jpg");
+            background-image: url("image/shipimage3.jpg");
+            background-size: cover ; 
             color: #333;
             font-family: Arial, sans-serif;
             display: flex;
@@ -36,14 +38,14 @@
 
         #form-container {
             background-color: #fff;
-            padding: 40px 60px;
+            padding: 40px 30px 40px 60px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             max-width: 600px;
             width: 25%;
             height: 50%;
             position: relative;
-            margin: 1%;
+            margin: 5%;
         }
 
         h1 {
@@ -97,7 +99,7 @@
         }
 
         button {
-            width: 100%;
+            width: 92%;
             padding: 3%;
             background-color: #007bff;
             border: none;
@@ -269,25 +271,35 @@
 
     }
     .log {
-        
-    }
-    .tet {
         background-color: black;
         color:white;
         width:100%;
         height:50px;
         display:flex;
-        justify-content: center;
+        justify-content: left;
+        padding-left: 0.5%;
         align-items: center;
         font-size: 200%;
+        font-weight: bold;
+        
+    }
+    .tet {
+        background-color: #e4e4e4;
+        color:black;
+        width:100%;
+        height:50px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 121%;
         font-weight: bold;
     }
     </style>
 </head>
 
 <body>
-<div class="log">hi</div>
-<div class="tet">Check our Services</div>
+<div class="log"><img src="image/newLogo.png" alt="" style="height:65%;"></div>
+<!-- <div class="tet">Compare all Shipping Logistic Prices with our Robotic Process Automation on a click.</div> -->
     <div class="container">
         <div id="form-container">
             <h1 style="margin-top:-6%">Port Form</h1>
