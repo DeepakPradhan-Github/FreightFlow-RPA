@@ -23,7 +23,8 @@
 
         .container {
 
-            background-color: #f4f4f9;
+            
+            background-image: url("image/shipimage2.jpg");
             color: #333;
             font-family: Arial, sans-serif;
             display: flex;
@@ -263,11 +264,30 @@
         justify-content: center;
         
     }
+    .tet, .log {
+        width:20%;
+
+    }
+    .log {
+        
+    }
+    .tet {
+        background-color: black;
+        color:white;
+        width:100%;
+        height:50px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 200%;
+        font-weight: bold;
+    }
     </style>
 </head>
 
 <body>
-
+<div class="log">hi</div>
+<div class="tet">Check our Services</div>
     <div class="container">
         <div id="form-container">
             <h1 style="margin-top:-6%">Port Form</h1>
