@@ -18,6 +18,7 @@
             align-items: center;
             height: 100vh;
             margin: 0; */
+            
         }
 
         .container {
@@ -368,7 +369,7 @@
                         <td><?php echo $row["destination"]; ?></td>
                         <td><?php echo $row["container"]; ?></td>
                         <td><?php echo $row["commodity"]; ?></td>
-                        <td><button id="button1" onclick='viewDetails( <?php echo $row["job_id"] ?> )'>View Details</button></td>
+                        <td><button id="button1" onclick='viewDetails( <?php echo $row["job_id"] ?> )'>View </button></td>
                     </tr>
                 <?php } ?>
 
