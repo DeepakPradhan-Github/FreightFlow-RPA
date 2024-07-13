@@ -288,6 +288,13 @@
         font-weight: bold;
         
     }
+    .log2{
+        display: flex;
+        justify-content: right;
+        width: 92%;
+        height: 50px;
+        align-items: center;
+    }
     .tet {
         background-color: #e4e4e4;
         color:black;
@@ -321,8 +328,8 @@ tbody tr:nth-child(odd) {
 </head>
 
 <body>
-<div class="log"><img src="image/so_finish_white1.png" alt="" style="height:65%; color:white; ">
-<img src="image/newLogo.png" alt="" style="height:65%; padding-left:84%;"></div>
+<div class="log"><img src="image/so_finish_white1.png" alt="" style="height:65%; color:white; "><span class="log2"><img src="image/newLogo.png" alt="" style="height:65%; ;"></span>
+</div>
 <!-- <div class="tet">Compare all Shipping Logistic Prices with our Robotic Process Automation on a click.</div> -->
     <div class="container">
         <div class="txtt">Compare all Shipping Logistic<br> prices with our advance <br>Robotic Process Automation<br> on a click.</div>
