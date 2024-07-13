@@ -282,7 +282,7 @@
         height:50px;
         display:flex;
         justify-content: left;
-        padding-left: 0.5%;
+        padding-left: 0%;
         align-items: center;
         font-size: 200%;
         font-weight: bold;
@@ -291,7 +291,7 @@
     .log2{
         display: flex;
         justify-content: right;
-        width: 90%;
+        width: 91%;
         height: 50px;
         align-items: center;
     }
