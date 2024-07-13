@@ -291,7 +291,7 @@
     .log2{
         display: flex;
         justify-content: right;
-        width: 92%;
+        width: 90%;
         height: 50px;
         align-items: center;
     }
