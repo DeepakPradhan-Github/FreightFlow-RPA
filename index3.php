@@ -335,7 +335,7 @@ tbody tr:nth-child(odd) {
         <div class="txtt">Compare all Shipping Logistic<br> prices with our advance <br>Robotic Process Automation<br> on a click.</div>
         <div id="form-container">
             <h1 style="margin-top:-6%">Port Form</h1>
-            <form onsubmit="return validateMyPort()" method="POST" action="data3.php">
+            <form onsubmit="return validateMyPort()" method="POST" action="formsubmit.php">
                 <div class="pform">
                     <div class="pform2">
                         <div class="form-group">
@@ -461,7 +461,7 @@ tbody tr:nth-child(odd) {
 
             // Send AJAX request to get suggestions
             $.ajax({
-                url: "data2.php", // Replace with your PHP script URL
+                url: "ajaxsubmit.php", // Replace with your PHP script URL
                 type: "POST",
                 data: { query: start_pt },
                 success: function (data) {
@@ -491,7 +491,7 @@ tbody tr:nth-child(odd) {
 
             // Send AJAX request to get suggestions
             $.ajax({
-                url: "data2.php", // Replace with your PHP script URL
+                url: "ajaxsubmit.php", // Replace with your PHP script URL
                 type: "POST",
                 data: { query2: end_pt },
                 success: function (data) {
@@ -518,7 +518,7 @@ tbody tr:nth-child(odd) {
 
             // Send AJAX request to get suggestions
             $.ajax({
-                url: "data2.php", // Replace with your PHP script URL
+                url: "ajaxsubmit.php", // Replace with your PHP script URL
                 type: "POST",
                 data: { query3: contain_pt },
                 success: function (data) {
