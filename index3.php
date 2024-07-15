@@ -8,6 +8,9 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+HR:wght@100..400&display=swap" rel="stylesheet">
     <style>
         body {
             /* background-color: #f4f4f9;
@@ -18,28 +21,35 @@
             align-items: center;
             height: 100vh;
             margin: 0; */
+            
+            
+            
         }
 
         .container {
 
-            background-color: #f4f4f9;
+            
+            background-image: url("image/shipimage3.jpg");
+            background-size: cover ; 
             color: #333;
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 80%;
             margin: 0;
         }
 
         #form-container {
             background-color: #fff;
-            padding: 40px 60px;
+            padding: 40px 30px 40px 60px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             max-width: 600px;
-            width: 100%;
+            width: 25%;
+            height: 50%;
             position: relative;
+            margin: 5%;
         }
 
         h1 {
@@ -50,7 +60,7 @@
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 1%;
             position: relative;
         }
 
@@ -62,15 +72,28 @@
         }
 
         input[type="text"],
-        input[type="date"],
+        
         input[type="number"] {
             width: calc(100% - 20px);
             padding: 12px;
             border: 1px solid #ccc;
             border-radius: 5px;
             display: block;
-            font-size: 16px;
+            font-size: 80%;
             box-sizing: border-box;
+            height:47%;
+        }
+
+    
+        input[type="date"] {
+            width: calc(100% - 10px);
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: block;
+            font-size: 80%;
+            box-sizing: border-box;
+            height:47%;
         }
 
         .suggestions {
@@ -80,13 +103,27 @@
         }
 
         button {
-            width: 100%;
-            padding: 15px;
+            width: 92%;
+            padding: 3%;
             background-color: #007bff;
             border: none;
             border-radius: 5px;
             color: #fff;
-            font-size: 18px;
+            font-size: 93%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #button1 {
+            width: 70%;
+            height: 60%;
+            padding-bottom: 5px;
+
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 93%;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
@@ -180,7 +217,7 @@
 
         th,
         td {
-            height: 70px;
+            height: 50px;
         }
 
         td {
@@ -234,15 +271,71 @@
         justify-content: center;
         
     }
+    .tet, .log {
+        width:20%;
+
+    }
+    .log {
+        background-color: black;
+        color:white;
+        width:100%;
+        height:50px;
+        display:flex;
+        justify-content: left;
+        padding-left: 0%;
+        align-items: center;
+        font-size: 200%;
+        font-weight: bold;
+        
+    }
+    .log2{
+        display: flex;
+        justify-content: right;
+        width: 90%;
+        height: 50px;
+        align-items: center;
+    }
+    .tet {
+        background-color: #e4e4e4;
+        color:black;
+        width:100%;
+        height:50px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 121%;
+        font-weight: bold;
+    }
+    .txtt {
+        color:white;
+        font-size:  200%;
+        font-weight: bold;
+
+    }
+    /* Apply to even rows */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Apply to odd rows */
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+
+
     </style>
 </head>
 
 <body>
-
+<div class="log"><img src="image/so_finish_white1.png" alt="" style="height:65%; color:white; "><span class="log2"><img src="image/newLogo.png" alt="" style="height:65%; ;"></span>
+</div>
+<!-- <div class="tet">Compare all Shipping Logistic Prices with our Robotic Process Automation on a click.</div> -->
     <div class="container">
+        <div class="txtt">Compare all Shipping Logistic<br> prices with our advance <br>Robotic Process Automation<br> on a click.</div>
         <div id="form-container">
-            <h1>Port Form</h1>
-            <form onsubmit="return validateMyPort()" method="POST" action="data3.php">
+            <h1 style="margin-top:-6%">Port Form</h1>
+            <form onsubmit="return validateMyPort()" method="POST" action="formsubmit.php">
                 <div class="pform">
                     <div class="pform2">
                         <div class="form-group">
@@ -340,7 +433,7 @@
                         <td><?php echo $row["destination"]; ?></td>
                         <td><?php echo $row["container"]; ?></td>
                         <td><?php echo $row["commodity"]; ?></td>
-                        <td><button onclick='viewDetails( <?php echo $row["job_id"] ?> )'>View Details</button></td>
+                        <td><button id="button1" onclick='viewDetails( <?php echo $row["job_id"] ?> )'>View </button></td>
                     </tr>
                 <?php } ?>
 
@@ -368,7 +461,7 @@
 
             // Send AJAX request to get suggestions
             $.ajax({
-                url: "data2.php", // Replace with your PHP script URL
+                url: "ajaxsubmit.php", // Replace with your PHP script URL
                 type: "POST",
                 data: { query: start_pt },
                 success: function (data) {
@@ -398,7 +491,7 @@
 
             // Send AJAX request to get suggestions
             $.ajax({
-                url: "data2.php", // Replace with your PHP script URL
+                url: "ajaxsubmit.php", // Replace with your PHP script URL
                 type: "POST",
                 data: { query2: end_pt },
                 success: function (data) {
@@ -425,7 +518,7 @@
 
             // Send AJAX request to get suggestions
             $.ajax({
-                url: "data2.php", // Replace with your PHP script URL
+                url: "ajaxsubmit.php", // Replace with your PHP script URL
                 type: "POST",
                 data: { query3: contain_pt },
                 success: function (data) {
